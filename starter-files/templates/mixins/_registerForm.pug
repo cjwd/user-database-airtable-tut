@@ -1,0 +1,34 @@
+mixin registerForm
+  .box
+    form(action="/user/add", method="post")
+      .field
+        label.label(for="fullname") First and Last Name
+        .control.has-icons-left.has-icons-right
+          input.input(type='text' name="fullname" id="fullname" placeholder='First and Last Name')
+          span.icon.is-small.is-left
+            i.fas.fa-user
+
+      .field
+        label.label(for="email") Email
+        .control.has-icons-left.has-icons-right
+          input.input(type='email' name="email" id="email" placeholder='Email')
+          span.icon.is-small.is-left
+            i.fas.fa-envelope
+
+      .field
+        label.label(for="username") Username
+        .control.has-icons-left.has-icons-right
+          input.input(type='text' name="username" id="username" placeholder='Username')
+          span.icon.is-small.is-left
+            i.fas.fa-user
+
+      .field
+        label.label(for="password") Password
+        .control.has-icons-left
+          input.input(type='password' name="password" id="password" placeholder='Password')
+          span.icon.is-small.is-left
+            i.fas.fa-lock
+
+      .field
+        .control
+          button.button.is-link Create Account
