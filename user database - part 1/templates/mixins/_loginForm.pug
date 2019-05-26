@@ -1,0 +1,18 @@
+mixin loginForm
+  form(action="/user/auth" method="POST")
+    .field
+      label.label(for="username") Email or Username
+      .control.has-icons-left.has-icons-right
+        input.input(type='text' name="username" id="username" placeholder='Email input' value='hello@')
+        span.icon.is-small.is-left
+          i.fas.fa-user
+    .field
+      label.label(for="password") Password
+      .control.has-icons-left
+        input.input(type='password' name="password" id="password" placeholder='Password')
+        span.icon.is-small.is-left
+          i.fas.fa-lock
+
+    .field
+      .control
+        button.button.is-link Log In
