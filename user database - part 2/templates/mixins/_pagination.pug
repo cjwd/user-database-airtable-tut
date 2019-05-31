@@ -1,0 +1,23 @@
+mixin pagination(page, pages, count)
+  .pages(role="navigation", aria-label="pagination")
+    span.total-pages #{count} Products
+    .paginate-links
+      if page > 1
+        a.first-page(href="/products")
+          span.icon
+            i.fas.fa-angle-double-left.fa-border
+        a.prev-page(href=`/products/page/${page - 1}`)
+          span.icon
+            i.fas.fa-angle-left.fa-border
+      .paging-input
+        label(for="current-page-selector", class="is-sr-only") Current Page
+        form(action="/products", method="GET")
+          input.input(type="text", name="page", value=`${page}`, class="current-page", id="current-page-selector")
+        span.total-pages of #{pages}
+      if page < pages
+        a.next-page(href=`/products/page/${parseFloat(page) + 1}`)
+          span.icon
+            i.fas.fa-angle-right.fa-border
+        a.last-page(href=`products/page/${pages}`)
+          span.icon
+            i.fas.fa-angle-double-right.fa-border
