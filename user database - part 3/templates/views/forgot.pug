@@ -1,0 +1,21 @@
+extends ../layouts/base
+
+block content
+  h1.title Password Reset
+
+  if (message)
+    .notification.is-success
+      button.delete
+      =message
+
+  form(action="/user/forgot" method="POST")
+    .field
+      label.label(for="username") Email or Username
+      .control.has-icons-left.has-icons-right
+        input.input(type='text' name="username" id="username" placeholder='Email input' value='hello@')
+        span.icon.is-small.is-left
+          i.fas.fa-user
+
+    .field
+      .control
+        button.button.is-link Reset Password

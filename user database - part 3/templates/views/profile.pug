@@ -1,0 +1,12 @@
+extends ../layouts/base
+
+block content
+  h1.title= `Welcome ${user.display_name}`
+
+  p
+    a(href="/logout") Logout
+
+  p= user.username
+  p= user.email
+  p= user.registered_date
+

@@ -1,0 +1,15 @@
+extends ../layouts/base
+include ../mixins/_loginForm
+
+block content
+  h1.title Log In
+
+  if (message)
+    .notification.is-success
+      button.delete
+      =message
+
+  +loginForm
+
+  small
+    a(href="/forgot-password") Lost your password?

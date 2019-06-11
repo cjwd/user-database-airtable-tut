@@ -1,0 +1,15 @@
+mixin resetForm(email, token)
+  form(action="/user/reset" method="POST")
+    .field
+      label.label(for="password") New Password
+      .control.has-icons-left
+        input.input(type='password' name="password" id="password" placeholder='Password')
+        span.icon.is-small.is-left
+          i.fas.fa-lock
+
+      input(type="hidden" name="email" value=`${email}`)
+      input(type="hidden" name="token" value=`${token}`)
+
+    .field
+      .control
+        button.button.is-link Update Password
