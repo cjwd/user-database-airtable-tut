@@ -1,16 +1,10 @@
-const webpack = require('webpack');
-
 const path = require('path');
-
-const fs = require('fs');
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
@@ -42,9 +36,7 @@ module.exports = {
   devtool: 'source-map',
   optimization: {
     minimizer: [
-      new UglifyJsPlugin({
-        cache: true,
-        parallel: true,
+      new TerserPlugin({
         sourceMap: true,
       }),
       new OptimizeCSSAssetsPlugin(),
