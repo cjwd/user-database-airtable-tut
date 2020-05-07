@@ -1,3 +1,11 @@
+## Description
+
+This is a demo for a tutorials series on how to use Airtable as a user database. The demo is divided into three parts. Follow along by visiting my blog. The complete code is in user-database-part-3.
+
+1. [Tutorial: User Database Part 1](https://chinarajames.com/user-database-with-airtable-part-1/)
+2. [Tutorial: User Database Part 2](https://chinarajames.com/user-database-with-airtable-part-2/)
+3. [Tutorial: User Database Part 3](https://chinarajames.com/user-database-with-airtable-part-3/)
+
 ## Getting Started
 
 **Requirements**
